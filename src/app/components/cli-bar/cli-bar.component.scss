@@ -1,0 +1,29 @@
+#cli {
+  background-color: black;
+  border-radius: 30px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  font-family: 'Inconsolata', monospace;
+  transition:0.3s;
+}
+
+#cli:hover {
+  box-shadow: 0 4px 8px 0px rgba(0,0,0,0.5);
+  transition: 0.3s;
+}
+
+
+#cli-textbox {
+  width: 80%;
+  background: transparent;
+  font-size: 1.2rem;
+  color: white;
+  border: none !important;
+  outline: none;
+  font-family: 'Inconsolata', monospace;
+}
+
+#cli-textbox :focus { outline: none; }

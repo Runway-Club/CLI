@@ -1,0 +1,72 @@
+<style type="text/css">
+  .tg {
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+    transition: 0.3s;
+    color: black;
+  }
+
+  .tg td {
+    border-style: solid;
+    border-width: 0px;
+    font-family: 'Maven Pro';
+    font-size: 14px;
+    overflow: hidden;
+    padding: 5px 5px;
+    word-break: normal;
+  }
+
+  .tg th {
+    border-style: solid;
+    border-width: 0px;
+    font-family: 'Maven Pro';
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 5px 5px;
+    word-break: normal;
+  }
+
+  .tg .tg-0lax {
+    text-align: left;
+    vertical-align: top
+  }
+
+  .tg:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+</style>
+<table *ngIf="command" class="tg"
+  style="margin:5px; border: none;table-layout: fixed; width: 150px; height: 150px; background: white;border-radius: 20px;">
+  <colgroup>
+    <col style="width: 20px">
+    <col style="width: 50px">
+  </colgroup>
+  <tbody>
+    <tr>
+      <td class="tg-0lax">
+        <img [src]="command.icon" style="width:20px">
+      </td>
+      <td class="tg-0lax">
+        <strong>{{command.name}}</strong>
+      </td>
+    </tr>
+    <tr>
+      <td class="tg-0lax" colspan="2">
+        {{command.description}}
+      </td>
+    </tr>
+    <tr>
+      <td class="tg-0lax"></td>
+      <td class="tg-0lax">
+        <nb-tag-list>
+          <nb-tag *ngIf="command.available" status="success" appearance="filled" text="Online"></nb-tag>
+          <nb-tag *ngIf="!command.available" status="warning" appearance="filled" text="NaN"></nb-tag>
+        </nb-tag-list>
+
+      </td>
+    </tr>
+  </tbody>
+</table>

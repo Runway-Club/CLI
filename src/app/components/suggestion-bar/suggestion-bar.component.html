@@ -1,0 +1,5 @@
+<div style="width:100%; overflow-x: auto; display: flex; flex-direction: row; margin: 10px;">
+  <app-command class="command" *ngFor="let cmd of commands; let i = index" [command]="cmd"
+    [style.animationDelay]="i*0.1-i*0.01+'s'">
+  </app-command>
+</div>

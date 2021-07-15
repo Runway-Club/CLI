@@ -1,0 +1,9 @@
+<div id="custom-cli" (keyup)="onKeyup($event)" (keypress)="onKeypress($event)" tabindex="0">
+  <span style="margin-left: 5px;"></span>
+  <span class="char" *ngFor="let c of getCharacters(); let i = index" [ngClass]="{'char-selected':cursorLoc==i}"
+    [scrollTop]="scrollPosition" [style.background]="c.background" [style.color]="c.color"
+    [style.borderRadius]="c.borderRadius">
+    <span *ngIf="c.description!=''" class="description">{{c.description}}:&nbsp;</span>
+    {{c.char=='
+    '?'&nbsp;':c.char}}</span>
+</div>

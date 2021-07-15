@@ -1,0 +1,28 @@
+#custom-cli {
+  width: 100%;
+  height: 50px;
+  background: black;
+  border-radius:25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.char {
+  padding: 0.07rem;
+  color: white;
+  background: inherit;
+  font-family: 'Inconsolata', monospace;
+}
+
+.char-selected {
+  background: white !important;
+  color: black !important;
+}
+
+.description {
+  color: black;
+  font-family: 'Maven Pro';
+  font-size: 0.7rem;
+}
